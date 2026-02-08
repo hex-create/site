@@ -249,6 +249,24 @@ a[href^="mailto:"] {
     @apply flex flex-col gap-1;
   }
 
+  .note-block {
+    @apply font-sans;
+    @apply leading-relaxed;
+    @apply p-4;
+    @apply bg-neutral-950;
+    @apply border border-solid border-neutral-850;
+    @apply rounded-xl;
+    @apply w-full;
+  }
+
+  .note-block > div > p:first-child {
+    @apply mt-0;
+  }
+
+  .note-block > div > p:last-child {
+    @apply mb-0;
+  }
+
   .note b,
   .note strong {
     @apply [font-variation-settings:'opsz'_7,_'wght'_500];
