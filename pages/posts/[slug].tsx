@@ -114,6 +114,15 @@ export default function Post(props) {
 
           {/* Main content */}
           <div className="post-content">
+            <div className="post-date-mobile xl:hidden">
+              <h3 className="pb-1">Date</h3>
+              <p className="sidebar">
+                <time className="time" dateTime={date}>
+                  <span className="sr-only">{date}</span>
+                  {formatDate(date, false)}
+                </time>
+              </p>
+            </div>
             <p className="text-neutral-700 dark:text-silver-dark mb-6">{readingTime} minute(s)</p>
             <div className="prose-custom">
               <PortableText content={content} />
